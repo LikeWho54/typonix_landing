@@ -1,27 +1,22 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import logo from "../../src/assets/website-logo.svg";
+const logo = "https://ucarecdn.com/6c7e80b5-191c-463c-8465-f8e93f57edf2/6.svg";
 
 function Footer() {
   const footerLinks = [
     {
       column1: [
-        { id: 1, title: "Features", url: "#" },
-        { id: 2, title: "Keyword Research", url: "#" },
-        { id: 3, title: "Rank Tracking", url: "#" },
-        { id: 4, title: "Competitor Analysis", url: "#" },
+        { id: 1, title: "Features", url: "#services" },
+        { id: 2, title: "Keyword Research", url: "#services" },
+        { id: 3, title: "Rank Tracking", url: "#workflows" },
+        { id: 4, title: "Competitor Analysis", url: "#services" },
       ],
       column2: [
-        { id: 5, title: "Company", url: "#" },
-        { id: 6, title: "About Us", url: "#" },
-        { id: 7, title: "Careers", url: "#" },
-        { id: 8, title: "Contact", url: "#" },
+        { id: 5, title: "Terms and Conditions", url: "#" },
+        { id: 6, title: "Privacy Policy", url: "#" },
       ],
       column3: [
-        { id: 9, title: "Resources", url: "#" },
-        { id: 10, title: "SEO Blog", url: "#" },
-        { id: 11, title: "Help Center", url: "#" },
-        { id: 12, title: "API Docs", url: "#" },
+        { id: 7, title: "Contact Us", url: "#" },
       ],
     },
   ];
@@ -37,10 +32,10 @@ function Footer() {
         <div className="right-footer-part pt-5 md:w-1/2">
           <div className="hero-button flex gap-x-5 py-4 justify-center items-center">
             <a
-              href="#"
-              className="flex text-base lg:text-base items-center justify-center rounded-lg h-[40px] lg:h-[44px] w-40 bg-blue-600 hover:bg-blue-700 font-semibold text-white hover:shadow-lg hover:drop-shadow-lg transition duration-200"
+              href="https://app.typonix.com/signup"
+              className="flex text-base lg:text-lg items-center justify-center rounded-lg h-[50px] lg:h-[60px] w-64 lg:w-72 bg-blue-600 hover:bg-blue-700 font-semibold text-white hover:shadow-lg hover:drop-shadow-lg transition duration-200"
             >
-              <span className="tracking-tight">Start Free Trial</span>
+              <span className="tracking-tight">Get Free SEO Gap Analysis</span>
               <BsArrowRight className="ml-2" />
             </a>
             <a
@@ -57,7 +52,7 @@ function Footer() {
         <div className="left-footer-part md:w-1/2 flex flex-col justify-start items-start">
           <button>
             <div className="header-logo flex items-center space-x-2">
-              <img src={logo} alt="" />
+              <img src={logo} alt="3P Digital LLC Logo" className="w-8 h-8" style={{filter: 'brightness(0) saturate(100%) invert(1)'}} />
               <h1 className="text-xl text-white font-[650]">Typonix</h1>
             </div>
           </button>
@@ -65,7 +60,7 @@ function Footer() {
             Typonix is the leading SEO platform for keyword research, competitor analysis, 
             and ranking optimization. Boost your organic traffic with data-driven insights.
           </p>
-          <p className="text-white text-sm mt-10">All rights reserved.</p>
+          <p className="text-white text-sm mt-10">© 2025 3P Digital LLC. All rights reserved.</p>
         </div>
 
         <div className="right-footer-part pt-5 md:w-1/2">

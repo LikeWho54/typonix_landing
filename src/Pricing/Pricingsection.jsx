@@ -1,43 +1,38 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import checkMark from "../../src/assets/Check Mark.svg";
-import Pricingtoggle from "./Pricingtoggle";
-import { useState } from "react";
 
 function PricingSection() {
-  const [enabled, setEnabled] = useState(false);
   const pricingOptions = [
     {
-      name: "Starter",
-      price: "$29",
-      yearlyPrice: "$290",
+      name: "Free",
+      price: "$0",
+      period: "/month",
       description:
-        "Perfect for individual SEO professionals and small websites looking to get started.",
+        "Perfect for getting started with SEO insights and testing our platform.",
       features: [
-        "Track up to 100 keywords",
-        "5 competitor analysis reports",
-        "Basic keyword research tools",
-        "Monthly ranking reports",
+        "1 free blog post",
+        "Basic SEO gap analysis",
+        "Competitor keyword insights",
         "Email support",
       ],
       backgroundColor: "#FFFFFF",
-      buttonColor: "bg-blue-600",
+      buttonColor: "bg-slate-600",
       buttonTextColor: "text-white",
-      tagColor: "bg-blue-100",
-      tagTextColor: "text-blue-700",
+      tagColor: "bg-slate-100",
+      tagTextColor: "text-slate-700",
     },
     {
-      name: "Professional",
+      name: "Monthly",
       price: "$79",
-      yearlyPrice: "$790",
+      period: "/month",
       description:
-        "Ideal for agencies and growing businesses that need comprehensive SEO analytics.",
+        "Most popular plan for businesses that need regular content and SEO insights.",
       features: [
-        "Track up to 1,000 keywords",
-        "Unlimited competitor analysis",
-        "Advanced keyword gap analysis",
-        "Weekly automated reports",
-        "SERP feature tracking",
+        "New blog post every 2 days",
+        "Advanced SEO gap analysis",
+        "Automated content calendar",
+        "Keyword research & tracking",
         "Priority support",
       ],
       backgroundColor: "rgb(59 130 246 / 0.05)",
@@ -45,20 +40,21 @@ function PricingSection() {
       buttonTextColor: "text-white",
       tagColor: "bg-blue-600",
       tagTextColor: "text-white",
+      isPopular: true,
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      yearlyPrice: "$1990",
+      name: "Yearly",
+      price: "$799",
+      period: "/year",
       description:
-        "For large organizations requiring white-label solutions and custom integrations.",
+        "Best value for committed businesses with comprehensive SEO and content needs.",
       features: [
-        "Unlimited keyword tracking",
-        "White-label reporting",
-        "API access & integrations",
-        "Custom competitor sets",
-        "Dedicated account manager",
-        "24/7 phone support",
+        "New blog post every 2 days",
+        "Advanced SEO gap analysis",
+        "Automated content calendar",
+        "Keyword research & tracking",
+        "Priority support",
+        "Free blog setup",
       ],
       backgroundColor: "#FFFFFF",
       buttonColor: "bg-slate-900",
@@ -69,7 +65,7 @@ function PricingSection() {
   ];
 
   return (
-    <div className="pricing max-w-5xl mx-auto py-10 border-b border-slate-100">
+    <div id="pricing" className="pricing max-w-5xl mx-auto py-10">
       <div className="featured-headline flex flex-col gap-y-2">
         <p
           className={`text-blue-600 rounded-full px-2.5 py-[1px] mt-10 text-center font-semibold`}
@@ -79,46 +75,53 @@ function PricingSection() {
         <h3 className="text-3xl sm:text-4xl lg:text-[44px] max-w-xs mx-auto md:max-w-full md:mx-0 text-center font-bold leading-[1.15] text-slate-900">
           Choose the perfect plan for your SEO needs
         </h3>
-        <div className="flex justify-center mt-14">
-          <Pricingtoggle enabled={enabled} setEnabled={setEnabled} />
-        </div>
         <div className="pricing-card grid px-10 lg:px-14 xl:px-2 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 lg:py-12 lg:pb-20 lg:pt-8 relative">
           {pricingOptions.map((option, index) => (
             <div key={index} className="relative">
               <div
-                className={`card pricing-card-box border border-slate-200 rounded-xl flex flex-col shadow-sm hover:shadow-md transition-shadow duration-200`}
+                className={`card pricing-card-box border border-slate-200 rounded-xl flex flex-col h-full shadow-sm hover:shadow-md transition-shadow duration-200`}
                 style={{ backgroundColor: option.backgroundColor }}
               >
               <div className="border-b border-slate-500/50">
                 <div className="p-5 flex flex-col gap-y-2">
-                  <p
-                    className={` rounded-full px-2.5 py-[1px] w-fit text-sm ${option.tagColor} ${option.tagTextColor}`}
-                  >
-                    {option.name}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <p
+                      className={` rounded-full px-2.5 py-[1px] w-fit text-sm ${option.tagColor} ${option.tagTextColor}`}
+                    >
+                      {option.name}
+                    </p>
+                    {option.isPopular && (
+                      <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        Most Popular
+                      </span>
+                    )}
+                  </div>
                   <h3 className="mt-5 text-sm font-medium text-slate-500/70">
                     <span className="text-3xl font-bold text-slate-800">
-                      {enabled ? option.yearlyPrice : option.price}
-                    </span>{" "}
-                    {enabled ? "/year" : "/month"}
+                      {option.price}
+                    </span>
+                    <span className="text-slate-600">{option.period}</span>
                   </h3>
                   <p className="text-sm lg:text-base text-slate-600 leading-relaxed">
                     {option.description}
                   </p>
-                  <button
+                  <a
+                    href="https://app.typonix.com/signup"
                     className={`my-2 flex text-base lg:text-lg items-center justify-center rounded-full h-12 w-full font-bold  border border-slate-500 hover:shadow-lg hover:drop-shadow-lg transition duration-200 ${option.buttonColor} ${option.buttonTextColor}`}
                   >
                     <span
                       className="tracking-tight"
                       style={{ color: option.buttonTextColor }}
                     >
-                      Select {option.name}
+                      {option.name === "Free" ? "Get Free SEO Gap Analysis" : 
+                       option.name === "Monthly" ? "Get Free SEO Gap Analysis" : 
+                       "Contact Us"}
                     </span>
                     <BsArrowRight className="ml-2" />
-                  </button>
+                  </a>
                 </div>
               </div>
-              <div className="pricing-features my-2.5 flex flex-col gap-y-5 p-5">
+              <div className="pricing-features my-2.5 flex flex-col gap-y-5 p-5 flex-grow">
                 {option.features.map((feature, index) => (
                   <div key={index} className="flex gap-x-3">
                     <img src={checkMark} alt="" />

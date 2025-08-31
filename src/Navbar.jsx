@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import logo from "./assets/website-logo.svg";
-import blacklogo from "./assets/logo-black.svg";
+// import logo from "./assets/website-logo.svg";
+const logo = "https://ucarecdn.com/6c7e80b5-191c-463c-8465-f8e93f57edf2/6.svg";
+// import blacklogo from "./assets/logo-black.svg";
+const blacklogo = "https://ucarecdn.com/6c7e80b5-191c-463c-8465-f8e93f57edf2/6.svg";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineCloseCircle, AiFillInstagram } from "react-icons/ai";
@@ -10,11 +12,10 @@ import { MdEmail } from "react-icons/md";
 
 // Menu items as JSON array
 const menuItems = [
-  { id: 1, text: "Features", url: "#" },
-  { id: 2, text: "Pricing", url: "#" },
-  { id: 3, text: "Resources", url: "#" },
-  { id: 4, text: "About", url: "#" },
-  { id: 5, text: "Contact", url: "#" },
+  { id: 1, text: "Features", url: "#services" },
+  { id: 2, text: "Workflows", url: "#workflows" },
+  { id: 3, text: "Pricing", url: "#pricing" },
+  { id: 4, text: "Reviews", url: "#testimonials" },
 ];
 
 const iconComponents = [
@@ -54,7 +55,7 @@ function MobileMenu({ onClose }) {
       <div>
         <button>
           <div className="header-logo p-5 flex items-center space-x-2">
-            <img src={blacklogo} alt="" />
+            <img src={blacklogo} alt="Typonix Logo" width="30" height="30" className="w-8 h-8" />
             <h1 className="text-xl font-clash text-black font-[650]">Typonix</h1>
           </div>
         </button>
@@ -71,10 +72,10 @@ function MobileMenu({ onClose }) {
           <div className="header-button-mobile space-y-2">
             <div className=" px-6 lg:flex lg:items-center">
               <a
-                href="#"
+                href="https://app.typonix.com/signup"
                 className="flex w-full items-center justify-center rounded-full border-2 border-black px-4 py-2.5 text-sm font-semibold text-black hover:shadow-lg hover:drop-shadow-lg hover:bg-slate-50/50 transition duration-200"
               >
-                <span>Connect Now</span>
+<span>Sign Up</span>
                 <BsArrowRight className="ml-2" />
               </a>
             </div>
@@ -132,18 +133,18 @@ function Navbar() {
     <div className="navbar-home fixed top-0 left-0 right-0 z-50 w-full bg-transparent">
       <nav className={`max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:py-4 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur border border-slate-700/50 rounded-lg mt-2 mx-5 lg:mx-auto' 
+          ? 'bg-[#173E5E]/95 backdrop-blur border border-blue-800/30 rounded-lg mt-2 mx-5 lg:mx-auto shadow-lg' 
           : 'bg-transparent'
       }`}>
         <div className="flex items-center justify-between">
           <button>
             <div className="header-logo flex items-center space-x-2">
-              <img src={logo} alt="" />
+              <img src={logo} alt="Typonix Logo" width="30" height="30" className="w-8 h-8" style={{filter: 'brightness(0) saturate(100%) invert(1)'}} />
               <h1 className="text-xl font-clash text-white font-[650]">Typonix</h1>
             </div>
           </button>
-          <div className="header-menu hidden lg:block">
-            <ul className="flex space-x-10 text-base font-[400] text-[#889D9D]">
+          <div className="header-menu hidden lg:block absolute left-1/2 transform -translate-x-1/2">
+            <ul className="flex space-x-10 text-base font-[400] text-white">
               {menuItems.map((menuItem, index) => (
                 <li key={index}>
                   <a href={menuItem.url}>
@@ -153,13 +154,19 @@ function Navbar() {
               ))}
             </ul>
           </div>
-          <div className="header-button space-x-2">
-            <div className="hidden lg:flex lg:items-center">
+          <div className="header-button space-x-3">
+            <div className="hidden lg:flex lg:items-center lg:space-x-3">
               <a
-                href="#"
+                href="https://app.typonix.com/signin"
+                className="flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white hover:text-blue-300 transition duration-200"
+              >
+                <span>Log In</span>
+              </a>
+              <a
+                href="https://app.typonix.com/signup"
                 className="flex items-center justify-center rounded-full border border-[#506F6F] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:drop-shadow-lg hover:bg-slate-500/20 transition duration-200"
               >
-                <span>Connect Now</span>
+                <span>Sign Up</span>
               </a>
             </div>
           </div>

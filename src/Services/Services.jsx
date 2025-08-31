@@ -16,31 +16,31 @@ const servicesData = [
   {
     title: "Competitor Analysis",
     description:
-      "Analyze competitor strategies and uncover gap opportunities in your market",
+      "Analyze competitor strategies and uncover gap opportunities in your SEO",
     image: code,
   },
   {
-    title: "Content Optimization",
+    title: "Instant Gap Detection",
     description:
-      "Optimize your content for search engines with data-driven keyword strategies",
+      "Our AI helps you capture SEO traffic you missed, but your competitors did not.",
     image: contentWriting,
   },
   {
-    title: "Ranking Tracking",
+    title: "Auto-Generated Content",
     description:
-      "Monitor your keyword rankings and track performance improvements over time",
+      "We automatically generate content for you targeting discovered opportunities.",
     image: branding,
   },
   {
-    title: "SEO Analytics",
+    title: "Guaranteed Rankings",
     description:
-      "Get detailed insights and reports on your SEO performance and opportunities",
+      "Content targeting competitor gaps that consistently ranks higher.",
     image: illustrate,
   },
   {
     title: "SERP Analysis",
     description:
-      "Analyze search engine results pages to understand ranking factors and competition",
+      "We analyze search engine results pages to understand ranking factors and competition",
     image: motionGraphics,
   },
 ];
@@ -52,10 +52,14 @@ const Card = ({ title, description, image }) => {
         <img className="h-8 w-8" src={image} alt="" />
       </div>
       <div className="card-content flex flex-col gap-y-2">
-        <h3 className="text-xl lg:text-2xl font-semibold text-slate-900">
+        <h3 className={`font-semibold text-slate-900 ${
+          title.length > 20 ? 'text-lg lg:text-xl' : 'text-xl lg:text-2xl'
+        }`}>
           {title}
         </h3>
-        <p className="text-base text-slate-600 leading-relaxed">{description}</p>
+        <p className={`text-slate-600 leading-relaxed ${
+          description.length > 80 ? 'text-sm lg:text-base' : 'text-base'
+        }`}>{description}</p>
       </div>
     </div>
   );
@@ -63,20 +67,19 @@ const Card = ({ title, description, image }) => {
 
 const Services = () => {
   return (
-    <div className="services max-w-5xl mx-auto px-0 py-10 border-b border-slate-100">
+    <div id="services" className="services max-w-5xl mx-auto px-0 py-10 border-b border-slate-100">
       <div className="services-headline flex flex-col lg:flex-row lg:items-center lg:justify-between px-10 lg:px-20 xl:px-0">
         <div className="left-service-part lg:w-1/2 flex flex-col justify-start items-start">
           <p className="text-blue-600 text-[15px] max-w-xs sm:max-w-sm sm:mx-auto md:mr-0 md:ml-0 pb-2 lg:pb-4 font-semibold">
             SEO Features
           </p>
           <h3 className="text-3xl lg:text-[44px] font-bold max-w-xs sm:max-w-4xl lg:max-w-sm sm:mx-auto md:mr-0 md:ml-0 leading-[1.15] text-slate-900">
-            Powerful SEO tools to boost your rankings
+Take Control of Your SEO
           </h3>
         </div>
         <div className="right-service-part pt-5 lg:w-1/2">
           <p className="text-base max-w-xs mr-auto sm:max-w-4xl lg:max-w-sm lg:mx-auto lg:mr-0 lg:ml-auto leading-[1.7] text-slate-600">
-            Typonix provides comprehensive SEO analytics and keyword research tools 
-            to help you dominate search engine results and drive organic growth.
+Simplify competitor research, generate high-ranking content, and grow traffic — all in one dashboard.
           </p>
         </div>
       </div>

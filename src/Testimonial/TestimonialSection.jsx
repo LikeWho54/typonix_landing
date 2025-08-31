@@ -52,7 +52,7 @@ function TestimonialSection() {
   };
 
   return (
-    <div className="testimonial max-w-6xl mx-auto py-10">
+    <div id="testimonials" className="testimonial max-w-6xl mx-auto py-10">
       <div className="testimonial-headline flex flex-col gap-y-2">
         <p className="text-amber-400 rounded-full px-2.5 py-1 text-center">
           Testimonials
