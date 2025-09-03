@@ -82,7 +82,6 @@ function MobileMenu({ onClose }) {
           </div>
         </div>
       </div>
-      <IconList />
     </div>
   );
 }

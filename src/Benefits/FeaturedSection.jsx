@@ -32,11 +32,11 @@ const featuredSteps = [
 const StepItem = ({ step, title, description, isActive, isCompleted, progress }) => (
   <div className={`flex items-start gap-x-3 p-4 rounded-lg border transition-all duration-500 ${
     isActive ? 'bg-slate-800/70 border-blue-500/50' : 
-    isCompleted ? 'bg-slate-800/60 border-green-500/50' : 
+    isCompleted ? 'bg-slate-800/60 border-blue-500/50' : 
     'bg-slate-800/50 border-slate-700/50'
   }`}>
     <div className={`flex-shrink-0 w-8 h-8 rounded-md flex items-center justify-center transition-colors duration-300 ${
-      isCompleted ? 'bg-green-600' : isActive ? 'bg-blue-600' : 'bg-slate-600'
+      isCompleted ? 'bg-blue-600' : isActive ? 'bg-blue-600' : 'bg-slate-600'
     }`}>
       <span className="text-white font-bold text-sm">
         {isCompleted ? '✓' : step}
