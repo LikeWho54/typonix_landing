@@ -16,7 +16,7 @@ function Footer() {
         { id: 6, title: "Privacy Policy", url: "#" },
       ],
       column3: [
-        { id: 7, title: "Contact Us", url: "#" },
+        { id: 7, title: "Contact Us", url: "mailto:support@typonix.com" },
       ],
     },
   ];
@@ -35,14 +35,14 @@ function Footer() {
               href="https://app.typonix.com/signup"
               className="flex text-base lg:text-lg items-center justify-center rounded-lg h-[50px] lg:h-[60px] w-64 lg:w-72 bg-blue-600 hover:bg-blue-700 font-semibold text-white hover:shadow-lg hover:drop-shadow-lg transition duration-200"
             >
-              <span className="tracking-tight">Get Free SEO Gap Analysis</span>
+              <span className="tracking-tight">Get A Free SEO Gap Analysis</span>
               <BsArrowRight className="ml-2" />
             </a>
             <a
               href="#"
               className="flex text-sm lg:text-base items-center justify-center rounded-lg border border-slate-600 h-[40px] lg:h-[44px] w-40 font-semibold text-white hover:shadow-lg hover:drop-shadow-lg hover:bg-slate-800 transition duration-200"
             >
-              <span className="tracking-tight">Book Demo</span>
+              <span className="tracking-tight">Book a Meeting</span>
             </a>
           </div>
         </div>

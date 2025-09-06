@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import dashboardImage from "../assets/dash screenshot.png";
+import dashboardImage from "../../public/Screenshot 2025-09-06 at 14-54-08 Typonix.png";
 
 const featuredSteps = [
   {
@@ -17,7 +17,7 @@ const featuredSteps = [
   },
   {
     step: "3",
-    title: "Get Your Free SEO Gap Analysis",
+    title: "Get A Free SEO Gap Analysis",
     description:
       "Instantly see competitor keywords, rankings, and content gaps.",
   },
@@ -99,7 +99,7 @@ const FeaturedSection = () => {
           Get started in 4 simple steps
         </h3>
         <a href="https://app.typonix.com/signup" className="mt-6 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 px-6 py-3 text-sm lg:text-base font-semibold text-white hover:shadow-lg hover:drop-shadow-lg transition-all duration-200 mx-auto w-fit">
-          <span className="tracking-tight">Get Free SEO Gap Analysis</span>
+          <span className="tracking-tight">Get A Free SEO Gap Analysis</span>
           <BsArrowRight className="ml-2" />
         </a>
       </div>

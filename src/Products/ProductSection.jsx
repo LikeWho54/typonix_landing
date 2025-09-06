@@ -88,7 +88,7 @@ const ProductSection = () => {
         </div>
         <div className="flex justify-center">
           <a href="https://app.typonix.com/signup" className="flex text-base lg:text-lg items-center justify-center rounded-lg bg-blue-600 hover:bg-blue-700 text-white h-[40px] lg:h-[50px] px-8 font-semibold hover:shadow-lg hover:drop-shadow-lg transition-all duration-200">
-            <span className="tracking-tight">Get Free SEO Gap Analysis</span>
+            <span className="tracking-tight">Get A Free SEO Gap Analysis</span>
           </a>
         </div>
       </div>
