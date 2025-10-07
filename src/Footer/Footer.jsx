@@ -12,11 +12,13 @@ function Footer() {
         { id: 4, title: "Competitor Analysis", url: "#services" },
       ],
       column2: [
-        { id: 5, title: "Terms and Conditions", url: "#" },
-        { id: 6, title: "Privacy Policy", url: "#" },
+        { id: 5, title: "Terms of Service", url: "/legal/terms-of-service" },
+        { id: 6, title: "Privacy Policy", url: "/legal/privacy-policy" },
+        { id: 7, title: "Cookie Policy", url: "/legal/cookie-policy" },
+        { id: 8, title: "Data Processing Addendum", url: "/legal/data-processing-addendum" },
       ],
       column3: [
-        { id: 7, title: "Contact Us", url: "mailto:support@typonix.com" },
+        { id: 9, title: "Contact Us", url: "mailto:support@typonix.com" },
       ],
     },
   ];
