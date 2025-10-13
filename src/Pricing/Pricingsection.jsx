@@ -197,7 +197,7 @@ function PricingSection() {
                     <span className="text-slate-600">{option.period}</span>
                     {option.name === "Yearly" && (
                       <span className="block text-blue-600 font-bold text-base mt-1">
-                        + Free blog setup
+                        + Free blog setup  ($799 value)
                       </span>
                     )}
                   </h3>
@@ -219,7 +219,7 @@ function PricingSection() {
                 {option.features.map((feature, index) => (
                   <div key={index} className="flex gap-x-3">
                     <img src={checkMark} alt="" />
-                    <p className={`text-sm ${feature === "Free blog setup" ? "text-blue-600 font-bold" : "text-slate-700"}`}>{feature}</p>
+                    <p className={`text-sm ${feature === "Free blog setup (800$ value)" ? "text-blue-600 font-bold" : "text-slate-700"}`}>{feature}</p>
                   </div>
                 ))}
               </div>
