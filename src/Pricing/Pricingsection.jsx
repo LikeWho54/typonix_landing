@@ -49,7 +49,7 @@ function PricingSection() {
       price: "$799",
       period: "/year",
       description:
-        "Best value for committed businesses with comprehensive SEO and content needs.",
+        "Best value for committed businesses.",
       features: [
         "New blog post every 2 days",
         "Advanced SEO gap analysis",
@@ -195,6 +195,11 @@ function PricingSection() {
                       {option.price}
                     </span>
                     <span className="text-slate-600">{option.period}</span>
+                    {option.name === "Yearly" && (
+                      <span className="block text-blue-600 font-bold text-base mt-1">
+                        + Free blog setup
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm lg:text-base text-slate-600 leading-relaxed">
                     {option.description}
@@ -214,7 +219,7 @@ function PricingSection() {
                 {option.features.map((feature, index) => (
                   <div key={index} className="flex gap-x-3">
                     <img src={checkMark} alt="" />
-                    <p className="text-slate-700 text-sm">{feature}</p>
+                    <p className={`text-sm ${feature === "Free blog setup" ? "text-blue-600 font-bold" : "text-slate-700"}`}>{feature}</p>
                   </div>
                 ))}
               </div>
